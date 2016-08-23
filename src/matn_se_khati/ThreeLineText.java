@@ -12,6 +12,7 @@ import java.util.Scanner;
 
 import javax.swing.JPanel;
 
+@SuppressWarnings("serial")
 public class ThreeLineText extends JPanel {
 	public static final int SPEED = 10;
 	private static File textsFolder = new File("files/matn_se_khati/texts");
