@@ -12,14 +12,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-public class Myfram extends JFrame {
+public class GrowingSquare extends JFrame {
 
 	int counter = 0;
 	Color color = Color.BLACK;
 
 	DrawPanel drawPanel = new DrawPanel();
 
-	public Myfram() {
+	public GrowingSquare() {
 		ActionListener listener = new AbstractAction() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -33,42 +33,39 @@ public class Myfram extends JFrame {
 				if (counter < 13) {
 					counter++;
 					drawPanel.repaint();
-					if(counter==12){
-						counter=0;
+					if (counter == 12) {
+						counter = 0;
 					}
 				}
 			}
 		};
 		final Timer timer = new Timer(500, listener);
-		
-		
+
 		drawPanel.setLayout(null);
 		add(drawPanel);
-		
-		 
-		
-		 JButton start=new JButton("Start");
-		 start.setBounds(40,100,100,60);
-		 drawPanel.add(start);
-		 
-		 start.addActionListener(new ActionListener() {
-			
+
+		JButton start = new JButton("Start");
+		start.setBounds(40, 100, 100, 60);
+		drawPanel.add(start);
+
+		start.addActionListener(new ActionListener() {
+
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				timer.start();
-				counter=0;
+				counter = 0;
 			}
 		});
-		 
-		 JButton end=new JButton("End");
-		 end.setBounds(40,170,100,60);
-		 drawPanel.add(end);
-		 
-		 end.addActionListener(new ActionListener() {
-			
+
+		JButton end = new JButton("End");
+		end.setBounds(40, 170, 100, 60);
+		drawPanel.add(end);
+
+		end.addActionListener(new ActionListener() {
+
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-			timer.stop();
+				timer.stop();
 			}
 		});
 
@@ -85,17 +82,12 @@ public class Myfram extends JFrame {
 		protected void paintComponent(Graphics g) {
 			super.paintComponent(g);
 
-
 			g.setColor(color);
-			g.drawRect(600 - counter * 20, 350 - counter * 20, counter * 40,
-					counter * 40);
+			g.drawRect(600 - counter * 20, 350 - counter * 20, counter * 40, counter * 40);
 			g.drawOval(600 - counter * 20 - 2, 350 - counter * 20 - 2, 4, 4);
-			g.drawOval(600 - counter * 20 - 2, 350 - counter * 20 + counter
-					* 40 - 2, 4, 4);
-			g.drawOval(600 - counter * 20 + counter * 40 - 2,
-					350 - counter * 20 - 2, 4, 4);
-			g.drawOval(600 - counter * 20 + counter * 40 - 2, 350 - counter
-					* 20 + counter * 40 - 2, 4, 4);
+			g.drawOval(600 - counter * 20 - 2, 350 - counter * 20 + counter * 40 - 2, 4, 4);
+			g.drawOval(600 - counter * 20 + counter * 40 - 2, 350 - counter * 20 - 2, 4, 4);
+			g.drawOval(600 - counter * 20 + counter * 40 - 2, 350 - counter * 20 + counter * 40 - 2, 4, 4);
 			g.drawOval(600 - 2, 350 - 2, 4, 4);
 		}
 

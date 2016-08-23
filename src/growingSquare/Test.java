@@ -9,7 +9,7 @@ public class Test {
 
 		EventQueue.invokeLater(new Runnable() {
             public void run() {
-            	 new Myfram();
+            	 new GrowingSquare();
             }
         });
 		

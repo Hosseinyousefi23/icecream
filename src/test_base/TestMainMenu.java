@@ -1,17 +1,17 @@
-package test_matn_se_khati;
+package test_base;
 
 import javax.swing.JFrame;
 
-import matn_se_khati.ThreeLineText;
+import base.MainMenu;
 
-public class TestMatnSeKhati {
+public class TestMainMenu {
 	public static void main(String[] args) {
 		JFrame application = new JFrame();
 		application.setSize(600, 600);
 		application.setVisible(true);
 		application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		ThreeLineText p = new ThreeLineText();
-		application.add(p);
+		MainMenu menu = new MainMenu();
+		application.add(menu);
 		application.setSize(700, 700);
 	}
 }

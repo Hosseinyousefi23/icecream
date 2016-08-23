@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 import javax.swing.JPanel;
 
-public class Panel extends JPanel {
+public class ThreeLineText extends JPanel {
 	public static final int SPEED = 10;
 	private static File textsFolder = new File("files/matn_se_khati/texts");
 	private Random r;
@@ -21,7 +21,7 @@ public class Panel extends JPanel {
 	private ArrayList<String> splitedText;
 	int currentLine = 0;
 
-	public Panel() {
+	public ThreeLineText() {
 		r = new Random();
 		splitedText = new ArrayList<String>();
 		try {
