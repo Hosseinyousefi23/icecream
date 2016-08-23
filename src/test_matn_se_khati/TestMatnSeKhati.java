@@ -12,5 +12,6 @@ public class TestMatnSeKhati {
 		application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Panel p = new Panel();
 		application.add(p);
+		System.out.println();
 	}
 }
