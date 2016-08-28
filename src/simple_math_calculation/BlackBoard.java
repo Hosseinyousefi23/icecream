@@ -189,6 +189,7 @@ public class BlackBoard extends JPanel {
 			} catch (IOException | FontFormatException e) {
 			}
 			while ((line = br.readLine()) != null) {
+				line = new String(line.getBytes(), "UTF-8");
 				allQuestions.add(line);
 			}
 		} catch (FileNotFoundException e) {
